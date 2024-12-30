@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora de IMC</title>
+
+    <!-- Fonte Google (exemplo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ícones do Font Awesome (opcional) -->
+    <script
+      src="https://kit.fontawesome.com/your_fontawesome_kit.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Arquivo de estilo -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Container principal -->
+    <div class="container">
+      <!-- Título -->
+      <h1>Calculadora de IMC</h1>
+
+      <!-- Descrição / Ilustração -->
+      <div class="illustration">
+        <i class="fas fa-weight"></i> <!-- Ícone de exemplo -->
+      </div>
+
+      <!-- Formulário de entrada -->
+      <div class="input-container">
+        <div class="input-box">
+          <label for="peso">
+            <i class="fas fa-balance-scale-right"></i> Peso (kg)
+          </label>
+          <input type="number" id="peso" placeholder="Ex: 70" min="1" />
+        </div>
+        <div class="input-box">
+          <label for="altura">
+            <i class="fas fa-ruler-vertical"></i> Altura (cm)
+          </label>
+          <input type="number" id="altura" placeholder="Ex: 170" min="1" />
+        </div>
+      </div>
+
+      <!-- Botão de Calcular -->
+      <button id="calcular">Calcular</button>
+
+      <!-- Exibição do resultado -->
+      <div class="resultado hidden" id="resultado">
+        <h2>Seu IMC: <span id="valor-imc">0.0</span></h2>
+        <p id="classificacao"></p>
+        <p id="recomendacao"></p>
+      </div>
+
+      <!-- Adicionando o botão para gerar o treino -->
+      <button id="gerar-treino" class="botao-treino">Gerar Treino</button>
+
+      <!-- Exibição do treino -->
+      <div class="treino hidden" id="treino">
+        <h2>Treino de Segunda a Sexta</h2>
+        <ul id="lista-treino"></ul>
+        <p class="alerta">* Esta é apenas uma sugestão de treino. Recomenda-se consultar um profissional de educação física antes de iniciar qualquer atividade física.</p>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

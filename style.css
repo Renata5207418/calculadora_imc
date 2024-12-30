@@ -1,0 +1,245 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Container principal */
+  .container {
+    background: #fff;
+    width: 360px;
+    max-width: 90%;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Título */
+  .container h1 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Ilustração / Ícone */
+  .illustration {
+    font-size: 4rem;
+    color: #66a6ff;
+    margin-bottom: 1rem;
+  }
+  
+  .illustration i {
+    animation: bounce 2s infinite;
+  }
+  
+  /* Animação de pulo */
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  /* Inputs */
+  .input-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .input-box {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .input-box label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #444;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  
+  .input-box i {
+    margin-right: 0.3rem;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid #eee;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input-box input:focus {
+    border-color: #66a6ff;
+  }
+  
+  /* Botão de calcular */
+  button#calcular {
+    background-color: #66a6ff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
+  
+  button#calcular:hover {
+    background-color: #89f7fe;
+    color: #333;
+  }
+  
+  /* Botão de gerar treino */
+  button#gerar-treino.botao-treino {
+    background-color: #28a745;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-top: 1rem; /* Espaço acima do botão */
+  }
+  
+  button#gerar-treino.botao-treino:hover {
+    background-color: #218838;
+  }
+  
+  /* Resultado */
+  .resultado {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f7f8fa;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .resultado.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .resultado h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .resultado #valor-imc {
+    color: #66a6ff;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  
+  .resultado p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .resultado #recomendacao {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Seção de treino */
+  .treino {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f7f8fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+  
+  .treino.hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .treino h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .treino ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  .treino ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .treino ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+  }
+  
+  .treino .alerta {
+    color: #555;
+    font-size: 0.85rem;
+  }
+  
+  /* Responsividade simples */
+  @media (max-width: 480px) {
+    .container {
+      width: 95%;
+      padding: 1.5rem;
+    }
+    .illustration {
+      font-size: 3rem;
+    }
+    .input-container {
+      flex-direction: column;
+    }
+  
+    .treino ul li {
+      font-size: 0.9rem;
+    }
+  }
+  
