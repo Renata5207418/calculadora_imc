@@ -71,6 +71,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma **Issue** ou
 
 Este projeto está licenciado sob a licença [MIT](LICENSE).
 
-🙏 Obrigado por utilizar a Calculadora de IMC com Sugestão de Treino! Esperamos que esta ferramenta ajude você a alcançar seus objetivos de saúde e bem-estar.
+🙏 Obrigado por utilizar a Calculadora de IMC com Sugestão de Treino! Espero que esta ferramenta ajude você a alcançar seus objetivos de saúde e bem-estar.
 
 ```
