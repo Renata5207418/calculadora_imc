@@ -1,6 +1,3 @@
-Claro! Abaixo estão uma descrição concisa do projeto e um modelo de README para o seu **Calculadora de IMC com Sugestão de Treino**.
-
----
 # Calculadora de IMC com Sugestão de Treino
 
 ## 📋 Descrição
